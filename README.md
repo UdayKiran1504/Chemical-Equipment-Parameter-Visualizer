@@ -1,20 +1,24 @@
 # Chemical-Equipment-Parameter-Visualizer
 A hybrid full-stack application with one shared Django backend and two frontends (React Web + PyQt5 Desktop) for visualizing chemical equipment data.
 chemical-equipment-visualizer/
-├── backend/                    # Django REST API
-│   ├── chemical_api/          # Django project
-│   ├── equipment/             # Main app
+│
+├── backend/                     # Django REST API
+│   ├── chemical_api/            # Django project
+│   ├── equipment/               # App
 │   ├── manage.py
 │   └── requirements.txt
-├── web-frontend/              # React + Chart.js
+│
+├── web-frontend/                # React + Chart.js
 │   ├── src/
 │   ├── public/
 │   └── package.json
-├── desktop-frontend/          # PyQt5 + Matplotlib
+│
+├── desktop-frontend/            # PyQt5 + Matplotlib
 │   ├── main.py
 │   └── requirements.txt
+│
 └── README.md
-Features
+
 
 CSV Upload: Upload equipment data via both web and desktop interfaces
 Data Analysis: Automatic calculation of averages and type distribution
