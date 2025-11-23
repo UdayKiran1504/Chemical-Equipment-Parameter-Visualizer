@@ -1,0 +1,525 @@
+/* ---------------------------------------------------
+   GLOBAL
+--------------------------------------------------- */
+:root {
+  font-family: "Inter", sans-serif;
+  color: #e7faff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #022e36;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* ---------------------------------------------------
+   PAGE BACKGROUND
+--------------------------------------------------- */
+.page-bg {
+  min-height: 100vh;
+  height: auto;
+  padding: 40px;
+  color: #e7faff;
+
+  background: radial-gradient(circle at top left, #0c4a57, #022e36);
+  background-size: 200% 200%;
+  animation: bgFloat 18s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* ---------------------------------------------------
+   HEADER (CENTERED)
+--------------------------------------------------- */
+.top-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.top-header h1 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ---------------------------------------------------
+   ICON BUBBLES
+--------------------------------------------------- */
+.data-icons {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.icon-bubble {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #e7faff;
+  animation: bubbleFloat 6s ease-in-out infinite;
+}
+
+.icon-bubble p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+@keyframes bubbleFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ---------------------------------------------------
+   MAIN LAYOUT
+--------------------------------------------------- */
+.layout {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* ---------------------------------------------------
+   LEFT SIDE
+--------------------------------------------------- */
+.left-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* ---------------------------------------------------
+   GLASS BASE
+--------------------------------------------------- */
+.glass {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.40);
+  padding: 28px;
+  height: 100%;
+}
+
+.empty-msg {
+  opacity: 0.6;
+  margin-top: 20px;
+  text-align: center; /* center empty message text */
+}
+
+/* ---------------------------------------------------
+   RIGHT SIDEBAR (FULL HEIGHT)
+--------------------------------------------------- */
+.right-box {
+  width: 330px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  height: 100%;
+  align-self: stretch;
+  overflow: visible;
+}
+
+.right-box h2 {
+  font-size: 22px;
+  margin: 0 0 18px 0;
+  text-align: center;   /* ★ center sidebar title */
+}
+
+/* ---------------------------------------------------
+   HISTORY LIST
+--------------------------------------------------- */
+.history-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  flex: 1;
+  overflow: visible !important;
+}
+
+.history-list li {
+  margin-bottom: 12px;
+}
+
+.history-item {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #e7faff;
+  padding: 12px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: center;     /* ★ center each upload title */
+}
+
+.history-item:hover {
+  background: rgba(255,255,255,0.20);
+}
+
+/* ---------------------------------------------------
+   SUMMARY CARDS (CENTERED)
+--------------------------------------------------- */
+.summary-grid {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.summary-card {
+  flex: 1;
+  padding: 22px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 18px;
+  text-align: center;   /* ★ center summary content */
+}
+
+/* ---------------------------------------------------
+   DUAL CHART + TABLE
+--------------------------------------------------- */
+.dual-panels {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.dual-item {
+  flex: 1;
+  max-width: 50%;
+  height: 470px;
+  padding: 0 !important;
+  overflow: hidden;
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------
+   UPLOAD + DOWNLOAD
+--------------------------------------------------- */
+.upload-box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  gap: 12px;
+  border-radius: 14px;
+  align-items: center;
+}
+
+.file-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #d6f7ff;
+}
+
+.file-input::file-selector-button {
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.upload-btn,
+.download-btn {
+  background: #0ea5e9;
+  border-radius: 14px;
+  padding: 12px 20px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+.upload-btn:hover,
+.download-btn:hover {
+  background: #0284c7;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center; /* ensure centered alignment */
+}
+
+
+.section-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.login-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;   /* allow title + card vertical stack */
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at center, #0a3d47, #022e36);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* centered title */
+.login-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #e7faff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* login card */
+.login-card {
+  width: 380px;
+  padding: 32px;
+
+  border-radius: 22px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px 16px;
+
+  border: none;
+  border-radius: 12px;
+  background: #0ea5e9;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #0284c7;
+}
+
+.error {
+  color: #ffb3b3;
+  margin-top: 10px;
+}
+
+/* Logout button */
+.logout-btn {
+  margin-left: 20px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  font-weight: 600;
+}
+.logout-btn:hover {
+  background: #dc2626;
+}
+/* --- Logout Button (TOP RIGHT) --- */
+.logout-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  padding: 8px 16px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.12);  /* matches glass theme */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+
+  color: #e7faff;
+  font-weight: 600;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.20);
+  transform: translateY(-2px);
+}
+.login-title {
+  text-align: center;
+}
+/* FOOTER */
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.login-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0;
+}
+/* ---------------------------------------------------
+   RESPONSIVE DESIGN
+--------------------------------------------------- */
+
+/* ============ TABLET (max-width: 1024px) ============ */
+@media (max-width: 1024px) {
+
+  .layout {
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .right-box {
+    width: 100%;
+    order: 3;
+  }
+
+  .dual-panels {
+    flex-direction: column;
+  }
+
+  .dual-item {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .top-header h1 {
+    font-size: 28px;
+  }
+}
+
+/* ============ MOBILE (max-width: 768px) ============ */
+@media (max-width: 768px) {
+
+  .page-bg {
+    padding: 20px;
+  }
+
+  .top-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logout-btn {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .icon-bubble {
+    width: 58px;
+    height: 58px;
+    font-size: 20px;
+  }
+
+  .left-body {
+    gap: 18px;
+  }
+
+  .glass {
+    padding: 18px;
+  }
+
+  .summary-grid {
+    flex-direction: column;
+  }
+
+  .summary-card {
+    width: 100%;
+  }
+
+  .dual-panels {
+    flex-direction: column;
+  }
+
+  .dual-item {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .right-box {
+    width: 100%;
+  }
+
+  /* Login page responsiveness */
+  .login-card {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .login-title {
+    font-size: 26px;
+    margin-bottom: 26px;
+  }
+}
+
+/* ============ SMALL MOBILE (max-width: 480px) ============ */
+@media (max-width: 480px) {
+
+  .top-header h1 {
+    font-size: 22px;
+  }
+
+  .icon-bubble {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .data-icons {
+    gap: 14px;
+  }
+
+  .login-title {
+    font-size: 22px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
