@@ -523,3 +523,100 @@ html, body {
     font-size: 12px;
   }
 }
+/* --- FIX FOR MOBILE 320px UPLOAD BUTTON NOT SHOWING --- */
+@media (max-width: 480px) {
+
+  /* Upload panel layout fix */
+  .upload-box {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .file-input {
+    width: 100% !important;
+  }
+
+  .upload-btn {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Ensures long filenames wrap instead of pushing button away */
+  .file-input::file-selector-button {
+    width: 100%;
+    white-space: normal;
+  }
+}
+/* ---------------------------------------------------
+   MOBILE View
+--------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  /* Stack summary items vertically */
+  .summary-grid {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  /* Make each summary card fit perfectly */
+  .summary-card {
+    width: 100% !important;
+    padding: 18px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .summary-card h3,
+  .summary-card p {
+    font-size: 16px;
+  }
+
+  /* Upload box fix for small screens */
+  .upload-box {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .file-input {
+    width: 100%;
+  }
+
+  .upload-btn {
+    width: 100%;
+  }
+}
+
+/* -------------- 320px Special Fix -------------- */
+@media (max-width: 360px) {
+
+  .summary-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .summary-card h3,
+  .summary-card p {
+    font-size: 14px;
+  }
+
+  .top-header h1, .login-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .icon-bubble {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  /* Fix dashboard padding */
+  .page-bg {
+    padding: 10px;
+  }
+}
