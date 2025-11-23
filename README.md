@@ -53,7 +53,7 @@ Data: pandas for CSV parsing/analytics
 DB: SQLite (stores last 5 uploads + metadata)
 Version control: Git / GitHub
   ```
-#Setup Instructions
+# Setup Instructions
 ```txt
 Prerequisites
 
@@ -61,7 +61,7 @@ Python 3.8+
 Node.js 16+
 npm or yarn
   ```
-#Backend Setup
+# Backend Setup
 ```txt
 1.Navigate to backend directory:
 cd backend
@@ -80,7 +80,7 @@ python manage.py createsuperuser
 6.Run development server:
 python manage.py runserver
   ```
-#Web Frontend Setup
+# Web Frontend Setup
 ```txt
 1.Navigate to web frontend directory:
 cd web-frontend
@@ -89,7 +89,7 @@ npm install
 3.Start development server:
 npm run dev
  ```
-#Desktop Frontend Setup
+# Desktop Frontend Setup
 ```txt
 1.Navigate to desktop frontend directory:
 cd desktop-client
@@ -101,9 +101,10 @@ pip install -r requirements.txt
 4.Run the application:
 python main.py
 ```
-#API Endpoints
+# API Endpoints
+```txt
 <img width="840" height="226" alt="image" src="https://github.com/user-attachments/assets/d727e203-e00e-4671-aedf-14c87fa0dc4e" />
-
+```
 
 
 
