@@ -1,18 +1,36 @@
 # Chemical-Equipment-Parameter-Visualizer
 Hybrid app (React web + PyQt5 desktop) with a Django REST backend that parses CSVs of chemical equipment, returns summary stats, stores the last 5 uploads, and shows visualizations (Chart.js on web, Matplotlib on desktop).
-##Project Structure
-'''txt
+## 📂 Project Structure
+
+```txt
 chemical-equipment-visualizer/
-├── backend/                    # Django REST API
-│   ├── chemical_api/          # Django project
-│   ├── equipment/             # Main app
+│
+├── backend/               # Django backend (API + PDF + history)
+│   ├── api/
+│   ├── config/
+│   ├── media/
 │   ├── manage.py
 │   └── requirements.txt
-├── web-frontend/              # React + Chart.js
-│   ├── src/
-│   ├── public/
-│   └── package.json
-├── desktop-frontend/          # PyQt5 + Matplotlib
+│
+├── desktop-app/           # PyQt5 desktop application
+│   ├── venv/
 │   ├── main.py
 │   └── requirements.txt
-└── README.md
+│
+├── fontened/              # React web app (your folder name)
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   ├── api.js
+│   │   ├── App.jsx
+│   │   ├── Login.jsx
+│   │   ├── main.jsx
+│   │   ├── styles.css
+│   │   ├── App.css
+│   │   └── index.css
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md 
