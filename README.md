@@ -102,9 +102,7 @@ pip install -r requirements.txt
 python main.py
 ```
 # API Endpoints
-```txt
 <img width="840" height="226" alt="image" src="https://github.com/user-attachments/assets/d727e203-e00e-4671-aedf-14c87fa0dc4e" />
-```
 
 
 
