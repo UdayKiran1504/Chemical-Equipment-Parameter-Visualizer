@@ -404,6 +404,141 @@ html, body {
   left: 0;
 }
 /* ---------------------------------------------------
+   PREVIEW TABLE (IMPROVED)
+--------------------------------------------------- */
+
+.preview-card {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 24px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+}
+
+/* wrapper enables horizontal scroll on small screens */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+}
+
+/* center title */
+.preview-card .section-title {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+/* table */
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e7faff;
+  min-width: 720px; /* ensures correct spacing like screenshot */
+}
+
+.preview-table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+
+.preview-table tbody td {
+  padding: 10px 16px;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.preview-table tbody tr:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* round bottom corners */
+.preview-table tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+.preview-table tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE - MOBILE FIX
+--------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .preview-card {
+    padding: 18px;
+  }
+  .preview-table {
+    min-width: 600px; /* allow clean scroll */
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-table {
+    min-width: 520px;
+  }
+}
+
+@media (max-width: 360px) {
+  .preview-table {
+    min-width: 480px;
+  }
+}
+/* TABLE WRAPPER – enables scrolling */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;       /* horizontal scroll */
+  overflow-y: auto;       /* vertical scroll */
+  max-height: 420px;      /* limit height so it scrolls */
+  border-radius: 16px;
+  scrollbar-width: thin;
+}
+
+/* WebKit scrollbars */
+.table-wrapper::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+.preview-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e7faff;
+}
+
+.preview-table th {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.preview-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  white-space: nowrap;   /* prevents text from wrapping */
+}
+
+/* Rounded corners for card */
+.preview-card {
+  background: rgba(255,255,255,0.07);
+  padding: 20px;
+  border-radius: 22px;
+}
+
+/* ---------------------------------------------------
    RESPONSIVE DESIGN
 --------------------------------------------------- */
 
