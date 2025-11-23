@@ -104,5 +104,27 @@ python main.py
 # API Endpoints
 <img width="840" height="226" alt="image" src="https://github.com/user-attachments/assets/d727e203-e00e-4671-aedf-14c87fa0dc4e" />
 
+# Authentication
+```txt
+Both frontends use Basic Authentication with these default credentials:
+Username: For Every New User
+Password: For Every New Password
+⚠️ Important: Change these credentials in production!
+```
+# CSV Data Format
+```txt
+The CSV file must contain these columns:
+
+Equipment Name
+Type
+Flowrate
+Pressure
+Temperature
+```
+# License
+This project is for educational purposes as part of an internship screening task.
+
+
+
 
 
